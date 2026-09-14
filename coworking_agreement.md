@@ -21,5 +21,5 @@ Talk through each section with your partner. Add notes on what you discussed and
 *Other co-working agreements that were not captured in the above sections.*
 
 ## Signatures
-_Annie Chang__ ___________ _______________
+_Annie Chang__ _Najma Shanle__ _Rahna Mahdi_
 Date: _09/14/2026_
