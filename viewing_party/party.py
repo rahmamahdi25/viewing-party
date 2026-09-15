@@ -123,9 +123,32 @@ def get_friends_unique_watched(user_data):
 
     return unique_movies
         
-# -----------------------------------------
 # ------------- WAVE 4 --------------------
-# -----------------------------------------
+
+def get_available_recs(user_data):
+    recs_list = []
+    #print(user_data["friends"])
+    for i in range(len(user_data["friends"])):
+        for f in range(len(user_data["friends"][i]["watched"])):
+            #print(len(user_data["friends"][i]["watched"]))
+            name = user_data["friends"][i]["watched"][f]["title"]
+            host = user_data["friends"][i]["watched"][f]["host"]
+            #print("Name:", name)
+        
+            found = False
+            #print(user_data["watched"])
+            for j in range(len(user_data["watched"])):
+                #print(user_data["watched"][j]["title"])
+                if name == user_data["watched"][j]["title"]:
+                    found = True
+            #print(found)
+            if not found:
+                if host in user_data["subscriptions"]:
+                    if user_data["friends"][i]["watched"][f] not in recs_list:
+                        recs_list.append(user_data["friends"][i]["watched"][f]) 
+                    #print(recs_list)     
+    #print(list(set(recs_list)))
+    return recs_list
 
 # -----------------------------------------
 # ------------- WAVE 5 --------------------

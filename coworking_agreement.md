@@ -4,8 +4,8 @@ Talk through each section with your partner. Add notes on what you discussed and
 
 ## Accessibility Needs
 *What does each team member need access to in order to succeed and show up the best they can?*
-*Rahma and Najma: 5am- 3pm pst 
-*Annie: 2am-4pm pst 
+*Rahma and Najma: 5am-3pm pst 
+*Annie: 5am-3pm pst 
 
 ## Collaboration vs. Individual Work Expectations
 *Clarify your collaboration expectations - does your group want to write code together all of the time? Or divide work to do independently, then come together to share accomplishments? What tools and technologies can help your collaboration?*
@@ -20,7 +20,7 @@ Talk through each section with your partner. Add notes on what you discussed and
 *Wriiten feedback and leaving comments so we can see what needs to changed 
 
 ## One Team Communication Skill to Improve
-*What is a teamwork-related skill you want to work on?*
+*What is a teamwork-related skill you want to work on?*How to organize the time and keep ourselves updated for any revision.
 
 ## Optional: Other agreements
 *Other co-working agreements that were not captured in the above sections.*
@@ -28,3 +28,6 @@ Talk through each section with your partner. Add notes on what you discussed and
 ## Signatures
 _Annie Chang__ _Najma Shanle__ _Rahna Mahdi_
 Date: _09/14/2026_
+
+We collaborate with slack and the google document below to keep ourselves updated:
+https://docs.google.com/document/d/1EW2TbM1s2mlTCYYJ2MTGsTOP07w4Qu4Dwz2oQpuHEwk/edit?tab=t.0
