@@ -23,13 +23,7 @@ def watch_movie(user_data, title):
         if isinstance(user_data, dict):
             if title == user_data["watchlist"][i]["title"]:
                 user_data["watched"].append(user_data["watchlist"].pop(i))
-                return user_data
-                #print(user_data)
-        else:
-            if title == user_data["watchlist"][i]:
-                user_data["watchlist"].remove("title")
-                user_data["watched"].append("title")
-                return user_data
+                return user_data               
 
     return user_data
 
@@ -67,7 +61,6 @@ def get_most_watched_genre(user_data):
             max_count = genre_count[genre]
             get_most_watched_genre = genre
 
-
     return get_most_watched_genre
 
 # ------------- WAVE 3 --------------------
@@ -78,7 +71,6 @@ def get_movie_titles(movies):
         titles.add(movie["title"])
 
     return titles
-
 
 def get_unique_watched(user_data):
     user_watched = user_data.get("watched", [])
@@ -97,7 +89,6 @@ def get_unique_watched(user_data):
             unique_movies.append(movie)
 
     return unique_movies
-
 
 def get_friends_unique_watched(user_data):
     user_watched = user_data.get("watched", [])
@@ -120,34 +111,26 @@ def get_friends_unique_watched(user_data):
                     if movie["title"] == title:
                         unique_movies.append(movie)
                         break
-
     return unique_movies
         
 # ------------- WAVE 4 --------------------
 
 def get_available_recs(user_data):
     recs_list = []
-    #print(user_data["friends"])
     for i in range(len(user_data["friends"])):
         for f in range(len(user_data["friends"][i]["watched"])):
             #print(len(user_data["friends"][i]["watched"]))
             name = user_data["friends"][i]["watched"][f]["title"]
             host = user_data["friends"][i]["watched"][f]["host"]
-            #print("Name:", name)
         
             found = False
-            #print(user_data["watched"])
             for j in range(len(user_data["watched"])):
-                #print(user_data["watched"][j]["title"])
                 if name == user_data["watched"][j]["title"]:
                     found = True
-            #print(found)
             if not found:
                 if host in user_data["subscriptions"]:
                     if user_data["friends"][i]["watched"][f] not in recs_list:
-                        recs_list.append(user_data["friends"][i]["watched"][f]) 
-                    #print(recs_list)     
-    #print(list(set(recs_list)))
+                        recs_list.append(user_data["friends"][i]["watched"][f])    
     return recs_list
 
 # ------------- WAVE 5 --------------------
@@ -171,7 +154,6 @@ def get_new_rec_by_genre(user_data):
                 recommendations.append(movie)
 
     return recommendations
-
 
 def get_rec_from_favorites(user_data):
     friend_movies = get_all_friend_movies(user_data)
